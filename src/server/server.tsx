@@ -24,8 +24,12 @@ app.get('/', (req, res) => {
 
     const { critical, other } = collect(app, css);
 
-    const slug = crypto.createHash('md5').update(other).digest('hex');
+    let slug = null;
+    if (other) {
+        slug = crypto.createHash('md5').update(other).digest('hex');
 
+        cssCache[slug] = other;
+    }
     res.send(
         renderToString(
             <Html

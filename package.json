@@ -11,21 +11,21 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@linaria/esbuild": "^3.0.0-beta.15",
-        "@types/express": "^4.17.13",
-        "@types/react": "^18.0.8",
-        "@types/react-dom": "^18.0.3",
-        "@types/styled-components": "^5.1.25",
-        "esbuild": "^0.14.38",
-        "prettier": "^2.6.2"
+        "@linaria/esbuild": "~3.0.0-beta.15",
+        "@types/express": "~4.17.13",
+        "@types/react": "~18.0.8",
+        "@types/react-dom": "~18.0.3",
+        "@types/styled-components": "~5.1.25",
+        "esbuild": "~0.14.38",
+        "prettier": "~2.6.2"
     },
     "dependencies": {
-        "@linaria/core": "^3.0.0-beta.15",
-        "@linaria/react": "^3.0.0-beta.15",
-        "@linaria/server": "^3.0.0-beta.13",
-        "@linaria/shaker": "^3.0.0-beta.15",
-        "express": "^4.18.0",
-        "react": "^18.1.0",
-        "react-dom": "^18.1.0"
+        "@linaria/core": "~3.0.0-beta.15",
+        "@linaria/react": "~3.0.0-beta.15",
+        "@linaria/server": "~3.0.0-beta.13",
+        "@linaria/shaker": "~3.0.0-beta.15",
+        "express": "~4.18.0",
+        "react": "~18.1.0",
+        "react-dom": "~18.1.0"
     }
 }
