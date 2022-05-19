@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
-import { styled } from '@linaria/react';
-
-const Button = styled.button`
-    height: 45px;
-    border-radius: 2px;
-    background-color: gray;
-    color: white;
-`;
+import { Routes, Route } from 'react-router-dom';
+import { Homepage } from './pages/Homepage';
+import { ProductDetailPage } from './pages/ProductDetailsPage';
 
 const App = () => {
     const [count, setCount] = useState(0);
@@ -17,8 +12,10 @@ const App = () => {
     };
     return (
         <main>
-            <h1>Hello, world!</h1>
-            <Button onClick={onClick}>Clicked ({count})</Button>
+            <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/pdp/:sku" element={<ProductDetailPage />} />
+            </Routes>
         </main>
     );
 };

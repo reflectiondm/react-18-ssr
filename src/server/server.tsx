@@ -4,7 +4,8 @@ import crypto from 'crypto';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { collect } from '@linaria/server';
-import App from '../app/app';
+import { StaticRouter } from 'react-router-dom/server';
+import App from '../app/App';
 import Html from '../app/Html';
 const app = express();
 
@@ -19,8 +20,12 @@ app.get('/styles/:slug', (req, res) => {
     res.end(cssCache[req.params.slug]);
 });
 
-app.get('/', (req, res) => {
-    const app = renderToString(<App />);
+app.get('*', (req, res) => {
+    const app = renderToString(
+        <StaticRouter location={req.url}>
+            <App />
+        </StaticRouter>
+    );
 
     const { critical, other } = collect(app, css);
 

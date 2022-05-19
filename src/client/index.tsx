@@ -1,5 +1,11 @@
 import React from 'react';
 import { hydrateRoot } from 'react-dom/client';
-import App from '../app/app';
+import { BrowserRouter } from 'react-router-dom';
+import App from '../app/App';
 
-hydrateRoot(document.getElementById('root'), <App />);
+hydrateRoot(
+    document.getElementById('root'),
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+);
