@@ -6,7 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build:server": "node ./build/server.js",
-        "build:client": "node ./build/client.js"
+        "build:client": "node ./build/client.js",
+        "dev": "npm-run-all --parallel build:*"
     },
     "author": "",
     "license": "ISC",
@@ -17,6 +18,7 @@
         "@types/react-dom": "~18.0.3",
         "@types/styled-components": "~5.1.25",
         "esbuild": "~0.14.38",
+        "npm-run-all": "~4.1.5",
         "prettier": "~2.6.2"
     },
     "dependencies": {
