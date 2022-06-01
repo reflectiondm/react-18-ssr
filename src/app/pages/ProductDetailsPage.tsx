@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { styled } from '@linaria/react';
+import { colors } from '../design-constants';
 
 const ImageWrapper = styled.div`
     height: 100px;
@@ -15,6 +16,11 @@ const Image = styled.img`
     object-fit: cover;
 `;
 
+const HeaderWrapper = styled.div`
+    height: 45px;
+    box-shadow: 0 2px 2px ${colors.charcoal100};
+`;
+
 export const ProductDetailPage: React.FC = () => {
     const [count, setCount] = useState(0);
 
@@ -25,7 +31,7 @@ export const ProductDetailPage: React.FC = () => {
 
     return (
         <div>
-            <h1>This is the PDP</h1>
+            <HeaderWrapper></HeaderWrapper>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati a possimus eius in eveniet doloribus
                 at illo omnis quod reiciendis cum, recusandae asperiores sed quos ullam totam nobis delectus dicta.

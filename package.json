@@ -5,9 +5,10 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "clean": "rm -rf ./out &&  cp -r ./src/static/ ./out/public/",
         "build:server": "node ./build/server.js",
         "build:client": "node ./build/client.js",
-        "dev": "npm-run-all --parallel build:*"
+        "dev": "npm-run-all --parallel clean build:*"
     },
     "author": "",
     "license": "ISC",
