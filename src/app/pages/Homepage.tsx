@@ -29,3 +29,5 @@ export const Homepage: React.FC = () => {
         </div>
     );
 };
+
+export default Homepage;

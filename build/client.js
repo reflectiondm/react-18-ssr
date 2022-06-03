@@ -1,5 +1,4 @@
 const linaria = require('@linaria/esbuild').default;
-const { getFips } = require('crypto');
 const fs = require('fs');
 const build = async () => {
     const result = await require('esbuild').build({
@@ -11,6 +10,8 @@ const build = async () => {
         minify: true,
         bundle: true,
         outdir: './out/public',
+        splitting: true,
+        format: 'esm',
         metafile: true,
         plugins: [
             linaria({
